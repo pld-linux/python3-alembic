@@ -6,34 +6,29 @@
 Summary:	Database migration tool for SQLAlchemy
 Summary(pl.UTF-8):	Narzędzie do migracji baz danych dla SQLAlchemy
 Name:		python3-alembic
-Version:	1.15.2
+Version:	1.17.1
 Release:	1
 License:	MIT
 Group:		Libraries/Python
 #Source0Download: https://pypi.org/simple/alembic/
 Source0:	https://files.pythonhosted.org/packages/source/a/alembic/alembic-%{version}.tar.gz
-# Source0-md5:	6ac26505bcf798ebeda9913e107b7421
+# Source0-md5:	a273b94a21e8a0809a5b3f06b6eb14cf
 URL:		https://pypi.org/project/alembic/
-BuildRequires:	python3-modules >= 1:3.6
-BuildRequires:	python3-setuptools
+BuildRequires:	python3-modules >= 1:3.10
+BuildRequires:	python3-setuptools >= 1:77.0.3
 %if %{with tests}
 BuildRequires:	python3-Mako
-BuildRequires:	python3-dateutil
-# tests with lowercase zone names and fake zone name rely on dateutil zoneinfo implementation
-BuildRequires:	python3-dateutil-zoneinfo
+BuildRequires:	python3-black >= 25.1
 BuildRequires:	python3-editor >= 0.3
-BuildRequires:	python3-pytest >= 4.6
+BuildRequires:	python3-pytest >= 8.1
 BuildRequires:	python3-sqlalchemy >= 1.3.0
 %endif
 BuildRequires:	rpm-pythonprov
 BuildRequires:	rpmbuild(macros) >= 1.714
-# when using /usr/bin/env or other in-place substitutions
-#BuildRequires:        sed >= 4.0
 %if %{with doc}
-#BuildRequires:	sphinx-pdg # -2 or -3
+#BuildRequires:	sphinx-pdg-3
 %endif
-# replace with other requires if defined in setup.py
-Requires:	python3-modules >= 1:3.2
+Requires:	python3-modules >= 1:3.10
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
