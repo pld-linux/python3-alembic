@@ -6,13 +6,13 @@
 Summary:	Database migration tool for SQLAlchemy
 Summary(pl.UTF-8):	Narzędzie do migracji baz danych dla SQLAlchemy
 Name:		python3-alembic
-Version:	1.17.1
+Version:	1.20.1
 Release:	1
 License:	MIT
 Group:		Libraries/Python
 #Source0Download: https://pypi.org/simple/alembic/
 Source0:	https://files.pythonhosted.org/packages/source/a/alembic/alembic-%{version}.tar.gz
-# Source0-md5:	a273b94a21e8a0809a5b3f06b6eb14cf
+# Source0-md5:	bb84aa125492dfc16d26003dcd181311
 URL:		https://pypi.org/project/alembic/
 BuildRequires:	python3-modules >= 1:3.10
 BuildRequires:	python3-setuptools >= 1:77.0.3
